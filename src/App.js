@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ConfigureStore } from './redux/configureStore';
 import Main from './components/MainComponent';
+import './App.css';
 
 const store = ConfigureStore();
 
@@ -11,7 +12,7 @@ class App extends Component {
     return(
       <Provider store={store}>
         <BrowserRouter>
-          <div className="App">
+          <div className="App d-flex flex-column min-vh-100">
             <Main />
           </div>
         </BrowserRouter>

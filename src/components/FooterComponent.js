@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 class Footer extends Component {
     render(){
         return (
-            <div className="container">
+            <div className="container mt-auto">
                 <h2>Footer</h2>
             </div>
         )

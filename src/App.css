@@ -1,38 +1,231 @@
-.App {
-  text-align: center;
+* {
+  font-family: 'Inter', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* body {
+  padding-top: 65px; 
+} */
+
+.body {
+  background-color: #121212;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.bodyA {
+  /* background-color: #c9655a; */
+  background-color: #cf8b84; 
+}
+
+.homeBody {
+  padding-top: 0;
+}
+
+
+html, body {
+  height: 100%;
+}
+
+#homeJumbotron {
+  background-image: url(https://picsum.photos/1920/1080);
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  min-height: 450px;
+  
+
+}
+
+@media only screen and (min-width: 992px) {
+  #homeJumbotronContent {
+      padding-top: 50px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bgParallax {
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#homeJumbotron p {
+  font-family: 'Merriweather', serif;
+  font-style: italic;   
+  letter-spacing: .05rem;     
+}
+
+.blogCard {
+  background-color: #303030;
+}
+
+#homeNavbar {
+  font-family: 'Playfair Display', serif;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  letter-spacing: .05rem;
+}
+
+#navSearchBtn {
+  border-color: rgb(255, 234, 117);
+  color: rgb(255, 234, 117);
+}
+
+.dropdown-toggle {
+  border: none;
+}
+
+
+
+.dropdown-menu {
+  text-shadow: none;
+  
+  /* remove letter-spacing set in #homeNavbar, since this has no border: */
+  letter-spacing: normal;  
+}
+
+@media only screen and (min-width: 768px) {
+  .dropdown:hover .dropdown-menu {
+      display: block; 
+  }
+}
+
+.footerLink, .footerSocial {
+  font-size: 1.5rem;
+}
+
+.aTagDark {
+  color: #212529;
+}
+
+.cardDeckImg {
+  object-fit: cover;
+  width: 100%;
+
+  /* vw is viewport width, this is height as a percentage of viewport */
+  height: 50vw; 
+}
+
+@media only screen and (min-width: 576px) {
+  .cardDeckImg {
+      height: 40vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .cardDeckImg {
+      height: 28vw;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .cardDeckImg {
+      height: 20vw;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .cardDeckImg {
+      height: 15vw;
+  }
+}
+
+.myNavbar {
+  background-color: #92a8d1;
+}
+
+.bgGradient {
+  /* background-image: linear-gradient(to bottom, #494040, #272727); */
+  background-color: #018a8a;
+}
+
+.bgColorA {
+  background-color: #92a8d1;
+}
+.bgColorB {
+  background-color: #D67147;
+}
+.bgColorC {
+  background-color: #73a88e;
+}
+.bgColorD {
+  background-color: #92a8d1;
+  
+}
+.bgColorE {
+  background-color: #386FA1;
+}
+.bgColorF {
+ background-color: #7DF9FF;
+}
+.bgColorFGradient {
+ background-image: linear-gradient(to top, #7DF9FF, #0ae1ec);
+ border: none;
+}
+
+.bgNavbarOpaque {
+  background-color: rgba(0,0,0,0.3);
+}
+
+.btnCustom {
+  background-color: #73a88e;
+  color: #f8f9fa;
+}
+
+.btnCustomA {
+  background-color: #034f84;
+  color: #f8f9fa;
+}
+.btnCustomB {
+  background-color: #71cc94;
+}
+.btnCustomC {
+  background-color: rgb(223, 212, 63);
+}
+.btnCustomD {
+  background-color: #034f84;
+  color: #f8f9fa;
+}
+.btnCustomE {
+  background-color: #fefbd8;
+}
+.btnCustomF {
+  background-color: #27afe9;
+}
+
+
+
+.custom-row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-flow: row wrap;
+  max-width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.custom-col-wrapper {
+  flex-basis:1;
+  flex-grow: 1;
+  width: 100%;
+  margin: 0 0 15px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 768px) {
+  .custom-col-wrapper {
+    flex-basis: 1;
+    width: 50%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width: 992px) {
+  .custom-col-wrapper {
+    flex-basis: 1;
+    width: 33%;
   }
+}
+
+.custom-col-wrapper .card {
+  margin: 0 5px;
 }
